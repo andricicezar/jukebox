@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <script src="../app-assets/js/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="app-controller.js"></script>
+
+    <script src="components/loading-screen/loading-screen.js"></script>
+    <script src="components/loading-screen/loading-screen-directive.js"></script>
+    
+    <script src="components/user-profile/user-profile.js"></script>
+    <script src="components/user-profile/user-profile-service.js"></script>
+  </head>
+
+  <body ng-app="sjApp">
+    <div id="C" ng-controller="appController">
+
+      <loading-screen id="loading-screen">
+        <div id="logo">
+          <img src="" />
+        </div>
+      </loading-screen>
+
+    </div>
+  </body>
+
+
+</html>

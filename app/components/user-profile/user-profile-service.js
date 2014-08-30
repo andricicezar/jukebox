@@ -3,7 +3,8 @@ angular.module('userProfile')
     function() {
       return {
         tryToInitializeUser: function() {
-          console.log('exists!');
+          // TODO: this function
+          return false;
         }
       }
     }

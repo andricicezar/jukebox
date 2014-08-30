@@ -75,3 +75,9 @@ html, body {
   background: #0e0e0e;
   z-index: 10000;
 }
+
+#loading-screen h1 {
+  line-height: 35em;
+  color: white;
+  text-align: center;
+}

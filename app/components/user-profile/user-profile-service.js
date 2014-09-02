@@ -1,11 +1,19 @@
 angular.module('userProfile')
-  .factory('userProfile', [
-    function() {
+  .factory('userProfile', ["$q",
+    function($q) {
       return {
+
+        // TODO:
         tryToInitializeUser: function() {
-          // TODO: this function
-          return false;
+          var deferred = $q.defer();
+
+          setTimeout(function() {
+            deferred.reject();
+          }, 1000);
+
+          return deferred.promise;
         }
+
       }
     }
   ])

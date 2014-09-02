@@ -1,0 +1,17 @@
+angular.module('sjControllers', [])
+  .controller('screenController', ['$scope', 'animations',
+    function($scope, animations) {
+      $scope.goFromLoadingScreenToSearchBarsScreen = function() {
+        $scope.loadingScreenExitAnimation();
+        // TODO: create animation
+        // TODO: destroy loading screen
+      };
+
+      $scope.goFromLoadingScreenToCreateProfileScreen = function() {
+        $scope.loadingScreenExitAnimation();
+        // TODO: create animation
+        // TODO: destroy loading screen
+      };
+    }
+  ])
+  ;

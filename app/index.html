@@ -1,7 +1,10 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="app.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700,500,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+
+    <script src="../app-assets/js/jquery.min.js"></script>
     <script src="../app-assets/js/angular.min.js"></script>
     <script src="../app-assets/js/TweenMax.min.js"></script>
     <script src="../app-assets/js/TimelineMax.min.js"></script>
@@ -15,16 +18,22 @@
 
     <script src="components/user-profile/user-profile.js"></script>
     <script src="components/user-profile/user-profile-service.js"></script>
+    <script src="components/user-profile/user-profile-directive.js"></script>
+
+    <script src="components/animations/animations.js"></script>
+    <script src="components/animations/animations-service.js"></script>
+
+    <script src="components/connect-bar/connect-bar.js"></script>
+    <script src="components/connect-bar/connect-bar-service.js"></script>
+    <script src="components/connect-bar/connect-bar-directive.js"></script>
   </head>
 
   <body ng-app="sjApp">
     <div id="C" ng-controller="screenController">
 
-      <loading-screen id="loading-screen">
-        <div id="logo">
-          <img src="" />
-        </div>
-      </loading-screen>
+      <loading-screen id="loading-screen" class="full-child"></loading-screen>
+
+      <connect-bar id="connect-bar" class="full-child"></connect-bar>
 
     </div>
   </body>

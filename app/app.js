@@ -5,7 +5,9 @@ angular.module('screens', [
 angular.module('sjApp', [
   'sjControllers',
   'screens',
-  'userProfile'
+  'connectBar',
+  'userProfile',
+  'animations'
 ])
   .config([
     function() {

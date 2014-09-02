@@ -65,6 +65,7 @@ html, body {
   left: 0;
   right: 0;
   background: #1e1e1e;
+  background: #0e0e0e;
 }
 
 /* SCREEN defaults */
@@ -76,16 +77,35 @@ html, body {
   height: 100%;
 }
 
-.full-scrollable-area {
+.scrollable-area {
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  overflow: auto;
+
+  /* Prevent native touch events on Windows */
+  -ms-touch-action: none;
+
+  /* Prevent the callout on tap-hold and text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: nativeone;
+  user-select: none;
+
+  /* Prevent text resize on orientation change, useful for web-apps */
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* SCREEN loading-screen */
 #loading-screen {
   background: #0e0e0e;
-  border-bottom: 1px solid #3e3e3e;
+  /*
+   * border-bottom: 1px solid #3e3e3e;
+   */
   z-index: 10000;
 }
 
@@ -178,11 +198,12 @@ html, body {
 #screen-bars .content h3 {
   font-size: 23px;
   font-weight: 300;
-  color: #e3e3e3;
+  color:  rgba(227, 227, 227, 0.5);
   text-align: center;
   margin-top: 8%;
   margin-bottom: 4%;
 }
+
 
 #screen-bars .bar {
   width: 100%;
@@ -192,8 +213,8 @@ html, body {
 }
 
 #screen-bars .bar .title {
-  color:  rgba(227, 227, 227, 0.5);
-  font-size: 23px; /* Approximation due to font substitution */
+  color: #e3e3e3;
+  font-size: 20px;
   font-weight: 300;
   margin-bottom: 2.5%;
 }

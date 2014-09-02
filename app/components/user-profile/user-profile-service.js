@@ -9,7 +9,7 @@ angular.module('userProfile')
 
           setTimeout(function() {
             deferred.reject();
-          }, 1000);
+          }, 3000);
 
           return deferred.promise;
         }

@@ -1,12 +1,13 @@
 angular.module('screens', [
-  'loadingScreen'
+  'loadingScreen',
+  'connectBar',
+  'userProfile',
 ]);
 
 angular.module('sjApp', [
   'sjControllers',
   'screens',
-  'connectBar',
-  'userProfile',
+  'scrollableArea',
   'animations'
 ])
   .config([
@@ -15,6 +16,7 @@ angular.module('sjApp', [
   ])
   .run([
     function() {
+      alert( new Fingerprint().get());
     }
   ])
   ;

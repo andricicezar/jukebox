@@ -1,6 +1,14 @@
 angular.module("animations")
   .factory("animations", [
     function() {
+      function activateHardwareAcceleration(el) {
+        angular.element(el).children().css({
+          "-webkit-transform": "translate3d(0,0,0)",
+          "-webkit-backface-visibility": "hidden"
+        });
+        return el;
+      }
+
       return {
         goFromLoadingScreenToBarsScreen: function() {
           var cont = angular.element("#loading-screen");
@@ -8,15 +16,15 @@ angular.module("animations")
 
           var anim = new TimelineLite();
           anim.pause();
-          anim.to(cont, 1, { height: "21%", ease: Power3.easeOut});
+          anim.to(activateHardwareAcceleration(cont), 1, { height: "21%", ease: Power3.easeOut});
 
           var bars = angular.element("#screen-bars .bar");
           for (var i = 0, l = bars.length; i < l; ++i) {
             var el = bars[i];
-            anim.to(el, 0.7, { opacity: 1, marginLeft: 0, ease: Power3.easeOut}, "-=0.50");
+            anim.to(activateHardwareAcceleration(el), 0.7, { opacity: 1, marginLeft: 0, ease: Power3.easeOut}, "-=0.5");
           }
 
-          return anim;
+          return anim.timeScale(1);
         }
 
       }

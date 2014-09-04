@@ -3,7 +3,9 @@ angular.module("appState")
     function() {
       return {
         wifiState: undefined,
-        availableConnections: undefined
+
+        availableConnections: undefined,
+        availableBars: []
       };
     }
   ])

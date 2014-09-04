@@ -1,41 +1,16 @@
 <div class="scrollable-area scrollable-area-verticaly">
-  <div class="content">
+  <div class="content" ng-controller="barsController">
     <h3>Select your location</h3>
 
-    <div class="bar">
+    <div class="bar" ng-repeat="bar in availableBars">
       <div class="animate">
-        <div class="title">La baza</div>
+        <div class="title">{{bar.title}}</div>
         <div class="image">
-          <img src="../app-assets/imgs/la-baza.png" width="500px" height="500px"/>
+          <img ng-src="{{bar.img_src}}" />
 
         </div>
       </div>
     </div>
-    <div class="bar">
-      <div class="animate">
-        <div class="title">La baza</div>
-        <div class="image">
-          <img src="../app-assets/imgs/la-baza.png" width="500px" height="500px"/>
-        </div>
-      </div>
-    </div>
 
-    <div class="bar">
-      <div class="animate">
-        <div class="title">La baza</div>
-        <div class="image">
-          <img src="../app-assets/imgs/la-baza.png" width="500px" height="500px"/>
-        </div>
-      </div>
-    </div>
-
-    <div class="bar">
-      <div class="animate">
-        <div class="title">La baza</div>
-        <div class="image">
-          <img src="../app-assets/imgs/la-baza.png" width="500px" height="500px"/>
-        </div>
-      </div>
-    </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 angular.module('sjApp')
-  .controller('screenController', ['$scope', 'appState', 'appService', 'animations',
-    function($scope, appState, appService, animations) {
+  .controller('screenController', ['$scope', 'appState', 'appService', 'animations', "$timeout",
+    function($scope, appState, appService, animations, $timeout) {
 
       $scope.$watch(
         function() { return appState.wifiState; },
@@ -14,6 +14,8 @@ angular.module('sjApp')
                   // TODO: go to noBarsScreen
                   return;
                 }
+
+                angular.copy(list, appState.availableBars);
                 // TODO:
                 // check if is any bar
                 //   if(no): go to noBarsScreen
@@ -22,7 +24,9 @@ angular.module('sjApp')
                 //       go to profileScreen
                 //     else:
                 //       go to barsScreen
-                animations.fromLoadingScreenToBarsScreen().play();
+                $timeout(function() {
+                  animations.fromLoadingScreenToBarsScreen().play();
+                }, 0);
               })
               ;
           }

@@ -12,7 +12,11 @@ angular.module("device")
       device.getAvailableConnections = function() {
         var deferred = $q.defer();
 
-        deferred.resolve([true, false, false, true]);
+        deferred.resolve([
+          {title: "La baza", img_src: "../app-assets/imgs/la_baza.png"},
+          {title: "La baza", img_src: "../app-assets/imgs/la_baza.png"},
+          {title: "La baza", img_src: "../app-assets/imgs/la_baza.png"}
+        ]);
 
         return deferred.promise;
       };

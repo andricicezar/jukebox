@@ -26,6 +26,7 @@ angular.module("animations")
             anim.to(activateHardwareAcceleration(el), 0.7, { opacity: 1, marginLeft: 0, ease: Power3.easeOut}, "-=0.5");
           }
 
+          console.log("here");
           return anim.timeScale(1);
         }
 

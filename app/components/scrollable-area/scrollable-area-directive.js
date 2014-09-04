@@ -1,6 +1,6 @@
 angular.module("scrollableArea")
-  .directive("scrollableAreaVerticaly", [
-    function() {
+  .directive("scrollableAreaVerticaly", ["$timeout",
+    function($timeout) {
       function link(scope, element, attrs) {
         element.iscroll = new IScroll(element[0], {
           mouseWheel: true
@@ -8,8 +8,10 @@ angular.module("scrollableArea")
 
         scope.$watch(
           function() { return angular.element(element[0]).height(); },
-          function(newValue, oldValue) {
-            element.iscroll.refresh();
+          function(newValue) {
+            $timeout(function() {
+              element.iscroll.refresh();
+            }, 0);
           }
         );
       };

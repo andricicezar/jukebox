@@ -1,16 +1,18 @@
 angular.module("device")
-  .service("device", ["appState", "$q",
-    function(appState, $q) {
+  .service("device", ["$q",
+    function($q) {
       var device = this;
 
-      device.setWifiState = function() {
-        appState.wifiState = true;
+      device.getWifiState = function() {
+        var deferred = $q.defer();
+        deferred.resolve(true);
+        return deferred.promise;
       };
 
-      device.getWifiConnections = function() {
+      device.getAvailableConnections = function() {
         var deferred = $q.defer();
 
-        deferred.resolve([0]);
+        deferred.resolve([true, false, false, true]);
 
         return deferred.promise;
       };

@@ -1,6 +1,7 @@
 angular.module('sjApp')
   .controller('screenController', ['$scope', 'appState', 'appService', 'animations',
     function($scope, appState, appService, animations) {
+
       $scope.$watch(
         function() { return appState.wifiState; },
         function(newValue, oldValue) {

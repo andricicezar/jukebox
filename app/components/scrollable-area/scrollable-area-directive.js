@@ -1,19 +1,22 @@
 angular.module("scrollableArea")
   .directive("scrollableAreaVerticaly", [
     function() {
-      function controller($scope, $element, $attrs) {
-        $scope.iscroll = new IScroll($element[0], {
+      function link(scope, element, attrs) {
+        element.iscroll = new IScroll(element[0], {
           mouseWheel: true
         });
 
-        setTimeout(function() {
-          $scope.iscroll.refresh();
-        }, 300);
+        scope.$watch(
+          function() { return angular.element(element[0]).height(); },
+          function(newValue, oldValue) {
+            element.iscroll.refresh();
+          }
+        );
       };
 
       return {
         restrict: 'C',
-        controller: controller
+        link: link
       }
     }
   ])

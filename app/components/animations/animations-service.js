@@ -18,6 +18,8 @@ angular.module("animations")
           anim.pause();
           anim.to(activateHardwareAcceleration(cont), 1, { height: "21%", ease: Power3.easeOut});
 
+          angular.element("#screen-bars").css("display", "block");
+
           var bars = angular.element("#screen-bars .bar");
           for (var i = 0, l = bars.length; i < l; ++i) {
             var el = bars[i];

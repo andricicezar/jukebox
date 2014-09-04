@@ -119,38 +119,6 @@ html, body {
   background-size: contain;
   background-position: center center;
 }
-
-/* SCREEN create-profile */
-#create-profile {
-  position: absolute;
-  top: 21%;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 9000;
-}
-
-#create-profile .subtitle {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: #ccc;
-}
-
-#create-profile .icon-male {
-  position: absolute;
-  top: 25%;
-  right: 51%;
-}
-
-#create-profile .icon-female {
-  position: absolute;
-  top: 25%;
-  left: 51%;
-}
-
 /* SCREEN: connect-bar */
 #connect-bar {
   z-index: 9000;
@@ -187,6 +155,7 @@ html, body {
 #screen-bars {
   position: absolute;
   z-index: 9500;
+  display: none;
 }
 
 #screen-bars .content {

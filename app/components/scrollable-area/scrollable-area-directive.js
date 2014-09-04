@@ -6,9 +6,8 @@ angular.module("scrollableArea")
           mouseWheel: true
         });
 
-        console.log("dada");
         setTimeout(function() {
-          console.log($scope.iscroll.refresh());
+          $scope.iscroll.refresh();
         }, 300);
       };
 

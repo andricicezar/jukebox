@@ -6,17 +6,25 @@ angular.module('screens', [
 
 angular.module('sjApp', [
   'sjControllers',
+  'appState',
   'screens',
   'scrollableArea',
+  'device',
   'animations'
 ])
   .config([
     function() {
     }
   ])
-  .run([
-    function() {
-      alert( new Fingerprint().get());
+  .run(['$document', 'appService',
+    function($document, appService) {
+      setTimeout( function() {
+        $document.trigger("deviceready");
+      }, 500);
+
+      $document.on("deviceready", function() {
+        appService.startInitializing();
+      });
     }
   ])
   ;

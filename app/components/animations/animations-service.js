@@ -1,16 +1,16 @@
 angular.module("animations")
   .factory("animations", [
     function() {
-      function activateHardwareAcceleration(el) {
+      var activateHardwareAcceleration = function(el) {
         angular.element(el).children().css({
           "-webkit-transform": "translate3d(0,0,0)",
           "-webkit-backface-visibility": "hidden"
         });
         return el;
-      }
+      };
 
       return {
-        goFromLoadingScreenToBarsScreen: function() {
+        fromLoadingScreenToBarsScreen: function() {
           var cont = angular.element("#loading-screen");
           var logo = angular.element("#loading-screen .loading-logo");
 
@@ -27,7 +27,7 @@ angular.module("animations")
           return anim.timeScale(1);
         }
 
-      }
+      };
     }
   ])
   ;

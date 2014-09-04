@@ -1,7 +1,10 @@
 angular.module("appState")
-  .service("appState", [
+  .factory("appState", [
     function() {
-      this.wifiState = undefined;
+      return {
+        wifiState: undefined,
+        availableConnections: undefined
+      };
     }
   ])
   ;

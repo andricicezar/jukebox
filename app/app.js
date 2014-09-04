@@ -5,7 +5,6 @@ angular.module('screens', [
 ]);
 
 angular.module('sjApp', [
-  'sjControllers',
   'appState',
   'screens',
   'scrollableArea',

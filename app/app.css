@@ -127,7 +127,7 @@ html, body {
   max-width: 50%;
   margin: 0 auto;
   height: 100%;
-  background-image: url(../app-assets/imgs/logo-social-jukebox.png);
+  background-image: url(lib/imgs/logo-social-jukebox.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -277,11 +277,11 @@ html, body {
 }
 
 #connect-bar, #create-profile, #loading-screen {
-  display: none;
+/*  display: none; */
 }
 
 #jukebox, #playlist, #social {
-  /* display: none; */
+  display: none; 
 }
 
 

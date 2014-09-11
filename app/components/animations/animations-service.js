@@ -87,7 +87,7 @@ angular.module("animations")
             top: -lScreen.height()
           }, 0);
 
-          var bars = angular.element(".bars");
+          var bars = angular.element("#screen-bars");
           anim.to(bars, 0.5, {
             opacity: 0
           }, 0);

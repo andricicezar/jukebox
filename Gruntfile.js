@@ -75,9 +75,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-rev');
   grunt.loadNpmTasks('grunt-usemin');
 
-  // Default task(s).
+  // Default task(s)
   grunt.registerTask('default', [
-    'clean', 'copy', 'useminPrepare', 'concat', 'uglify:my_target', 'cssmin:my_target', 'usemin', 'connect:dev'
+    'connect:dev'
+  ]);
+  grunt.registerTask('production', [
+    'clean', 'copy', 'useminPrepare', 'concat', 'uglify:my_target', 'cssmin:my_target', 'usemin', 'connect:production'
   ]);
 
 };

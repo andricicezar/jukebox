@@ -11,7 +11,6 @@ angular.module("scrollableArea")
         scope.$watch(
           function() { return element.find(".bubbles").width() + " " + element.width(); },
           function(newValue) {
-            console.log("dada2");
             $timeout(function() {
               element.iscroll.refresh();
             }, 100);

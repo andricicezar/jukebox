@@ -10,7 +10,6 @@ angular.module("scrollableArea")
         scope.$watch(
           function() { return element.find(".content").height() + " " + element.height(); },
           function(newValue) {
-            console.log("dada");
             $timeout(function() {
               element.iscroll.refresh();
             }, 100);

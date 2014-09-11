@@ -1,20 +1,23 @@
 angular.module('userProfile')
   .factory('userProfile', ["$q",
     function($q) {
-      return {
+      return $this = {
+        name: undefined,
+        color: undefined,
 
         // TODO:
-        tryToInitializeUser: function() {
+        createProfile: function(name, color) {
           var deferred = $q.defer();
 
-          setTimeout(function() {
-            deferred.reject();
-          }, 3000);
+          $this.name = name;
+          $this.color = color;
+
+          // TODO: check if is uniqe
+          deferred.resolve();
 
           return deferred.promise;
         }
-
-      }
+      };
     }
   ])
   ;

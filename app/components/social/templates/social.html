@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="bubbles-wrapper">
+    <div class="scrollable-area scrollable-area-horizontally">
+      <div class="bubbles">
+        <ng-include ng-repeat="bubble in bubbles" src="'components/social/templates/bubble.html'">
+        </ng-include>
+      </div>
+    </div>
+  </div>
+
+  <div id="chat">
+    <div class="scrollable-area scrollable-area-vertically">
+      <div class="content chat">
+      </div>
+    </div>
+  </div>
+
+  <div class="input">
+  </div>
+</div>

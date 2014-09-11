@@ -2,6 +2,10 @@ angular.module('screens', [
   'loadingScreen',
   'connectBar',
   'userProfile',
+  'jukebox',
+  'playlist',
+  'social',
+  'chat'
 ]);
 
 angular.module('sjApp', [

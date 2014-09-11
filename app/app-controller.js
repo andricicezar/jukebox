@@ -15,18 +15,21 @@ angular.module('sjApp')
                   return;
                 }
 
-                angular.copy(list, appState.availableBars);
                 // TODO:
                 // check if is any bar
                 //   if(no): go to noBarsScreen
                 //   else:
                 //     if(is connected already to a bar):
                 //       go to profileScreen
+                //     if(is only a bar):
+                //       connect directly
+                //       go to profileScreen
                 //     else:
                 //       go to barsScreen
-                $timeout(function() {
-                  animations.fromLoadingScreenToBarsScreen().play();
-                }, 0);
+
+                // JUNK
+                angular.copy(list, appState.availableBars);
+                animations("fromLoadingScreenToBarsScreen");
               })
               ;
           }

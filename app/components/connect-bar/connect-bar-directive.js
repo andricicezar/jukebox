@@ -39,7 +39,24 @@ angular.module("connectBar")
     function() {
       return {
         restrict: 'C',
-        templateUrl: 'components/connect-bar/templates/bars.html'
+        templateUrl: 'components/connect-bar/templates/bars.html',
+        controller: function($scope, appState) {
+          $scope.availableBars = appState.availableBars;
+        }
+      }
+    }
+  ])
+
+  .directive("bar", ["appService",
+    function(appService) {
+      return {
+        restrict: 'C',
+        link: function(scope, element) {
+          var mc = new Hammer(element[0]);
+          mc.on("tap", function() {
+            appService.connectToBar(scope.bar, element);
+          });
+        }
       }
     }
   ])

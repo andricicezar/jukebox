@@ -8,17 +8,15 @@
 
   <body ng-app="sjApp">
     <div id="C" ng-controller="screenController">
+      <screen-loading id="loading-screen" class="full-child"></screen-loading>
+      <screen-connecting id="connect-bar" class="full-child"></screen-connecting>
+      <screen-profile id="create-profile" class="full-child"></screen-profile>
 
-      <loading-screen id="loading-screen" class="full-child"></loading-screen>
-
-      <connect-bar id="connect-bar" class="full-child"></connect-bar>
-
-      <create-profile id="create-profile" class="full-child"></create-profile>
-
-      <playlist id="playlist" class="full-child"></playlist>
+      <screen-playlist id="playlist" class="full-child"></screen-playlist>
       <div id="effect" class="full-child"></div>
-      <social id="social" class="full-child"></social>
-      <jukebox id="jukebox" class="full-child"></jukebox>
+
+      <screen-social id="social" class="full-child"></screen-social>
+      <screen-jukebox id="jukebox" class="full-child"></screen-jukebox>
     </div>
 
     <script src="../app-assets/js/fingerprint.js"></script>
@@ -33,43 +31,6 @@
     <script src="app.js"></script>
     <script src="app-controller.js"></script>
     <script src="app-service.js"></script>
-
-
-    <script src="components/app-state/app-state.js"></script>
-    <script src="components/app-state/app-state-service.js"></script>
-
-    <script src="components/loading-screen/loading-screen.js"></script>
-    <script src="components/loading-screen/loading-screen-directive.js"></script>
-
-    <script src="components/scrollable-area/scrollable-area.js"></script>
-    <script src="components/scrollable-area/scrollable-area-directive.js"></script>
-
-    <script src="components/user-profile/user-profile.js"></script>
-    <script src="components/user-profile/user-profile-service.js"></script>
-    <script src="components/user-profile/user-profile-directive.js"></script>
-
-    <script src="components/animations/animations.js"></script>
-    <script src="components/animations/animations-service.js"></script>
-
-    <script src="components/device/device.js"></script>
-    <script src="components/device/device-service.js"></script>
-
-    <script src="components/jukebox/jukebox.js"></script>
-    <script src="components/jukebox/jukebox-directive.js"></script>
-
-    <script src="components/playlist/playlist.js"></script>
-    <script src="components/playlist/playlist-directive.js"></script>
-
-    <script src="components/social/social.js"></script>
-    <script src="components/social/social-directive.js"></script>
-
-    <script src="components/chat/chat.js"></script>
-    <script src="components/chat/chat-directive.js"></script>
-
-    <script src="components/connect-bar/connect-bar.js"></script>
-    <script src="components/connect-bar/connect-bar-directive.js"></script>
-    <script src="components/connect-bar/connect-bar-controller.js"></script>
-
    </body>
 
 

@@ -1,19 +1,7 @@
 angular.module('screens', [
-  'loadingScreen',
-  'connectBar',
-  'userProfile',
-  'jukebox',
-  'playlist',
-  'social',
-  'chat'
 ]);
 
 angular.module('sjApp', [
-  'appState',
-  'screens',
-  'scrollableArea',
-  'device',
-  'animations'
 ])
   .config([
     function() {

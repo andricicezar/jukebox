@@ -3,7 +3,7 @@ angular.module("screenConnecting")
     function() {
       return {
         restrict: 'C',
-        templateUrl: 'components/screen-loading/searching-bars/searching-bars.html'
+        templateUrl: 'components/screen-connecting/searching-bars/searching-bars.html'
       }
     }
   ])

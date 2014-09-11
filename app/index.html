@@ -1,9 +1,11 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="app.css" />
+    <!-- build:css sj.min.css -->
+    <link rel="stylesheet" href="app.css" />
+    <!-- endbuild -->
+
     <!--    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700,500,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'> -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
-
   </head>
 
   <body ng-app="sjApp">
@@ -19,18 +21,64 @@
       <screen-jukebox id="jukebox" class="full-child"></screen-jukebox>
     </div>
 
-    <script src="../app-assets/js/fingerprint.js"></script>
-    <script src="../app-assets/js/jquery.min.js"></script>
-    <script src="../app-assets/js/iscroll.js"></script>
-    <script src="../app-assets/js/angular.min.js"></script>
-    <script src="../app-assets/js/TweenMax.min.js"></script>
-    <script src="../app-assets/js/TimelineMax.min.js"></script>
-    <script src="../app-assets/js/hammer.min.js"></script>
+    <!-- build:js sj.min.js -->
+    <script src="lib/js/fingerprint.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/iscroll.js"></script>
+    <script src="lib/js/angular.min.js"></script>
+    <script src="lib/js/TweenMax.min.js"></script>
+    <script src="lib/js/TimelineMax.min.js"></script>
+    <script src="lib/js/hammer.min.js"></script>
 
 
     <script src="app.js"></script>
     <script src="app-controller.js"></script>
     <script src="app-service.js"></script>
+
+    <script src="components/animations/animations.js"></script>
+    <script src="components/animations/animations-service.js"></script>
+
+    <script src="components/app-state/app-state.js"></script>
+    <script src="components/app-state/app-state-service.js"></script>
+
+    <script src="components/device/device.js"></script>
+    <script src="components/device/device-service.js"></script>
+
+    <script src="components/profile/profile.js"></script>
+    <script src="components/profile/profile-service.js"></script>
+
+    <script src="components/screen-connecting/screen-connecting.js"></script>
+    <script src="components/screen-connecting/screen-connecting-directive.js"></script>
+    <script src="components/screen-connecting/bars-found/bars-found-directive.js"></script>
+    <script src="components/screen-connecting/no-bars-found/no-bars-found-directive.js"></script>
+    <script src="components/screen-connecting/open-wifi/open-wifi-directive.js"></script>
+    <script src="components/screen-connecting/searching-bars/searching-bars-directive.js"></script>
+
+    <script src="components/screen-jukebox/screen-jukebox.js"></script>
+    <script src="components/screen-jukebox/screen-jukebox-directive.js"></script>
+
+    <script src="components/screen-loading/screen-loading.js"></script>
+    <script src="components/screen-loading/screen-loading-directive.js"></script>
+
+    <script src="components/screen-playlist/screen-playlist.js"></script>
+    <script src="components/screen-playlist/screen-playlist-directive.js"></script>
+
+    <script src="components/screen-profile/screen-profile.js"></script>
+    <script src="components/screen-profile/screen-profile-directive.js"></script>
+    <script src="components/screen-profile/create-profile/create-profile-directive.js"></script>
+
+    <script src="components/screen-social/screen-social.js"></script>
+    <script src="components/screen-social/screen-social-directive.js"></script>
+    <script src="components/screen-social/bubbles/bubbles-directive.js"></script>
+    <script src="components/screen-social/bubbles/bubble/bubble-directive.js"></script>
+    <script src="components/screen-social/chat/chat.js"></script>
+    <script src="components/screen-social/chat/chat-directive.js"></script>
+
+    <script src="components/scrollable-area/scrollable-area.js"></script>
+    <script src="components/scrollable-area/scrollable-area-horizontally/scrollable-area-horizontally-directive.js"></script>
+    <script src="components/scrollable-area/scrollable-area-vertically/scrollable-area-vertically-directive.js"></script>
+
+    <!-- endbuild -->
    </body>
 
 

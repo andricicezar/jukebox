@@ -1,4 +1,4 @@
-angular.module('loadingScreen', [
+angular.module('screenLoading', [
 ])
   .config([
     function() {

@@ -1,4 +1,6 @@
-angular.module("screenSocial", [])
+angular.module("screenSocial", [
+  'chat'
+])
   .config([
     function() {
     }

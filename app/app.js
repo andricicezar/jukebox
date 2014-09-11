@@ -1,7 +1,19 @@
 angular.module('screens', [
+  'screenConnecting',
+  'screenJukebox',
+  'screenLoading',
+  'screenPlaylist',
+  'screenProfile',
+  'screenSocial',
+  'animations',
+  'scrollableArea'
 ]);
 
 angular.module('sjApp', [
+  'appState',
+  'device',
+  'profile',
+  'screens'
 ])
   .config([
     function() {

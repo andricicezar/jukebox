@@ -13,10 +13,10 @@ angular.module("device")
         var deferred = $q.defer();
 
         deferred.resolve([
-          {title: "La baza", img_src: "../app-assets/imgs/la_baza.png"},
-          {title: "Underground", img_src: "../app-assets/imgs/la_underground.jpg"},
-          {title: "Meru", img_src: "../app-assets/imgs/la_meru.png"},
-          {title: "La baza", img_src: "../app-assets/imgs/la_baza.png"}
+          {title: "La baza", img_src: "lib/imgs/la_baza.png"},
+          {title: "Underground", img_src: "lib/imgs/la_underground.jpg"},
+          {title: "Meru", img_src: "lib/imgs/la_meru.png"},
+          {title: "La baza", img_src: "lib/imgs/la_baza.png"}
         ]);
 
         return deferred.promise;

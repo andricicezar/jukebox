@@ -3,7 +3,7 @@ angular.module("screenConnecting")
     function() {
       return {
         restrict: 'C',
-        templateUrl: 'components/open-wifi/open-wifi.html'
+        templateUrl: 'components/screen-connecting/open-wifi/open-wifi.html'
       }
     }
   ])

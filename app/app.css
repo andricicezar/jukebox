@@ -43,11 +43,11 @@ html, body {
 }
 
 #connect-bar, #create-profile, #loading-screen {
-/*  display: none; */
+  display: none;
 }
 
 #jukebox, #playlist, #social {
-  display: none; 
+/*  display: none; */
 }
 
 .icon {

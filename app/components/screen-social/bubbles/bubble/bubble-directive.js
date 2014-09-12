@@ -6,9 +6,11 @@ angular.module("screenSocial")
         transclude: false,
         templateUrl: 'components/screen-social/bubbles/bubble/bubble.html',
         controller: function($scope, $element, appState, animations) {
-          var mc = new Hammer($element[0]);
+          var mc = new Hammer($element.find(".bubble-wrapper")[0]);
+
           mc.on('tap', function() {
             // TODO: open chat if is needed
+            $element.find(".bubble").toggleClass("active");
 
             $scope.$apply(function() {
               animations("openChat");

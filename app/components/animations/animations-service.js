@@ -175,6 +175,18 @@ angular.module("animations")
           return anim.play();
         },
 
+        closeChat: function() {
+          var anim = new TimelineMax();
+          var oE = new optimizeElements();
+
+          var social = angular.element("#social");
+          anim.to(social, 0.3, {
+            top: angular.element("#C").height() - angular.element(".bubbles-wrapper").height()
+          }, 0);
+
+          return anim.play();
+        },
+
         fromCreateProfileToJukebox: function() {
           angular.element("#create-profile").css("display", "none");
           angular.element("#loading-screen").css("display", "none");

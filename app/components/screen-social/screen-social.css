@@ -1,0 +1,54 @@
+/* SCREEN social */
+#social {
+  top: calc(100% - 80px);
+  z-index: 2000;
+  height: auto;
+  bottom: 0;
+  background: #1e1e1e;
+}
+
+#social .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#social .bubbles-wrapper {
+  background: #0e0e0e;
+/*  border-top: 1px solid #3e3e3e; */
+  width: 100%;
+  height: 80px;
+}
+#social .bubbles {
+  padding: 10px 10px;
+  white-space: nowrap;
+  position: absolute;
+  min-width: calc(100% - 20px + 1px);
+}
+
+#social .bubble {
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 3px solid #ed537F;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+#chat {
+  position: absolute;
+  top: 80px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+#chat .content {
+  padding: 10px 20px;
+}
+
+

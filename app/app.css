@@ -4,8 +4,8 @@ html, body {
   height: 100%;
   overflow: hidden;
   position: relative;
-  color: white;
-  font-family: 'Roboto', sans-serif;
+  color: #fafafa;
+  font-family: 'roboto', sans-serif;
 }
 
 /* HELPERS */

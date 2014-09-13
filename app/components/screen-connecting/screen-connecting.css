@@ -1,9 +1,9 @@
-/* SCREEN: connect-bar */
-#connect-bar {
+/* SCREEN: screen-connecting */
+#screen-connecting {
   z-index: 9000;
 }
 
-#connect-bar .container {
+#screen-connecting .container {
   position: absolute;
   top: 15%;
   bottom: 0;
@@ -11,19 +11,19 @@
   right: 0;
 }
 
-#connect-bar #screen-search-bars {
+#screen-connecting #screen-search-bars {
   position: absolute;
   z-index: 9800;
   display: none;
 }
 
-#connect-bar #screen-searching-bars {
+#screen-connecting #screen-searching-bars {
   position: absolute;
   z-index: 9700;
   display: none;
 }
 
-#connect-bar #screen-no-bars {
+#screen-connecting #screen-no-bars {
   position: absolute;
   z-index: 9600;
   display: none;

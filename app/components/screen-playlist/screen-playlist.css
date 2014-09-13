@@ -6,28 +6,28 @@
   background: #1e1e1e;
 }
 
-#playlist {
+#screen-playlist {
   left: 100%;
   z-index: 3000;
   background: #1e1e1e;
 }
 
-#playlist .header, #playlist .content {
-  padding: 0 5%;
+#screen-playlist .content {
+  padding: 0 15px;
 }
 
-#playlist .header {
+#screen-playlist .header {
   height: 50px;
   background: #0e0e0e;
 }
 
-#playlist .header .title {
+#screen-playlist .header .title {
   font-size: 100%;
   font-weight: bold;
   float: left;
 }
 
-#playlist .container {
+#screen-playlist .container {
   position: absolute;
   top: 50px;
   bottom: 0;
@@ -35,28 +35,30 @@
   right: 0;
 }
 
-#playlist .content {
-  margin-top: 10px;
+#screen-playlist .content {
   padding-bottom: 10px;
 }
 
-#playlist .song {
-  margin: 5px 0;
+#screen-playlist .song {
   height: 60px;
+  border-bottom: 1px solid #3e3e3e;
 }
 
-#playlist .song .song-title {
+#screen-playlist .song .song-title {
   font-weight: bold;
-  color: #15acd6;
+  color: #eee;
+  /*color: #15acd6;*/
   line-height: 1.5em;
+  margin-top: 6px;
 }
 
-#playlist .song .song-subtitle {
-  color: #e9e9e9;
+#screen-playlist .song .song-subtitle {
+  /*color: #e9e9e9;*/
+  color: #9e9e9e;
   line-height: 1.2em;
 }
 
-#playlist .song .song-data {
+#screen-playlist .song .song-data {
   width: 100%;
   float: left;
   margin-right: -50px;

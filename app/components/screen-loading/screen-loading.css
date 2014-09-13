@@ -1,12 +1,12 @@
-/* SCREEN loading-screen */
-#loading-screen {
+/* SCREEN screen-loading */
+#screen-loading {
   background: #0e0e0e;
   /* border-bottom: 1px solid #3e3e3e;
    */
   z-index: 10000;
 }
 
-#loading-screen .loading-logo {
+#screen-loading .loading-logo {
   width: 100%;
   max-width: 50%;
   margin: 0 auto;

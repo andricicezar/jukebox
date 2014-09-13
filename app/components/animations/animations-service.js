@@ -33,7 +33,7 @@ angular.module("animations")
           var anim = new TimelineMax();
           anim.pause();
 
-          var cont = angular.element("#loading-screen");
+          var cont = angular.element("#screen-loading");
           oE.activateHardwareAccelaration(cont);
 
           anim.to(cont, 1, { height: "15%", ease: Power3.easeOut});
@@ -59,13 +59,13 @@ angular.module("animations")
 
           var currentBar = options.barEl;
 
-          var lScreen = angular.element("#loading-screen");
+          var lScreen = angular.element("#screen-loading");
           var titleHeight = currentBar.find(".title").height() + parseInt(currentBar.css("margin-bottom").replace("px", ""));
           var clone = currentBar.clone();
 
           (function(currentBar, clone) {
             anim.addCallback(function(){
-              angular.element("#connect-bar").prepend(clone);
+              angular.element("#screen-connecting").prepend(clone);
               clone.addClass("animatedBar");
               clone.css({
                 position: "absolute",
@@ -111,7 +111,7 @@ angular.module("animations")
               .css("top", currentBar.height())
               ;
 
-            angular.element("#connect-bar")
+            angular.element("#screen-connecting")
               .css("height", currentBar.height())
               ;
 
@@ -131,7 +131,7 @@ angular.module("animations")
           var oE = new optimizeElements();
           var anim = new TimelineMax();
           
-          var barLogo = angular.element("#connect-bar");
+          var barLogo = angular.element("#screen-connecting");
           var createProfile = angular.element("#create-profile .container");
 
           anim.to(barLogo, 0.3, {
@@ -149,7 +149,7 @@ angular.module("animations")
           var oE = new optimizeElements();
           var anim = new TimelineMax();
           
-          var barLogo = angular.element("#connect-bar");
+          var barLogo = angular.element("#screen-connecting");
           var createProfile = angular.element("#create-profile .container");
 
           anim.to(barLogo, 0.3, {
@@ -167,7 +167,7 @@ angular.module("animations")
           var anim = new TimelineMax();
           var oE = new optimizeElements();
 
-          var social = angular.element("#social");
+          var social = angular.element("#screen-social");
           anim.to(social, 0.3, {
             top: "40px"
           }, 0);
@@ -179,7 +179,7 @@ angular.module("animations")
           var anim = new TimelineMax();
           var oE = new optimizeElements();
 
-          var social = angular.element("#social");
+          var social = angular.element("#screen-social");
           anim.to(social, 0.3, {
             top: angular.element("#C").height() - angular.element(".bubbles-wrapper").height()
           }, 0);
@@ -189,12 +189,12 @@ angular.module("animations")
 
         fromCreateProfileToJukebox: function() {
           angular.element("#create-profile").css("display", "none");
-          angular.element("#loading-screen").css("display", "none");
-          angular.element("#connect-bar").css("display", "none");
+          angular.element("#screen-loading").css("display", "none");
+          angular.element("#screen-connecting").css("display", "none");
 
-          angular.element("#social").css("display", "block");
-          angular.element("#jukebox").css("display", "block");
-          angular.element("#playlist").css("display", "block");
+          angular.element("#screen-social").css("display", "block");
+          angular.element("#screen-jukebox").css("display", "block");
+          angular.element("#screen-playlist").css("display", "block");
 
         },
 
@@ -202,7 +202,7 @@ angular.module("animations")
           var anim = new TimelineMax();
 
           var effect = angular.element("#effect");
-          var playlist = angular.element("#playlist");
+          var playlist = angular.element("#screen-playlist");
 
           anim.addCallback(function() {
             effect.css("display", "block");
@@ -231,7 +231,7 @@ angular.module("animations")
             ease: Power1.easeIn
           }, 0);
 
-          var playlist = angular.element("#playlist");
+          var playlist = angular.element("#screen-playlist");
           anim.to(playlist, 0.3, {
             left: "100%",
             ease: Power3.easeOut

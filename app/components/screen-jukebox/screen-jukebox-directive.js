@@ -1,6 +1,6 @@
 angular.module("screenJukebox")
-  .directive("screenJukebox", ["animations",
-    function(animations) {
+  .directive("screenJukebox", ["animations", "appState", "jukeboxFilter",
+    function(animations, appState, jukeboxFilter) {
       return {
         restrict: 'E',
         transclude: false,
@@ -11,7 +11,10 @@ angular.module("screenJukebox")
           mc.on('tap', function() {
             animations("openPlaylist");
           });
+
+          scope.jukebox = jukeboxFilter(appState.playlist, appState.jukebox);
         }
+
       };
     }
   ])

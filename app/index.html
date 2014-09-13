@@ -18,15 +18,15 @@
 
   <body ng-app="sjApp">
     <div id="C" ng-controller="screenController">
-      <screen-loading id="loading-screen" class="full-child"></screen-loading>
-      <screen-connecting id="connect-bar" class="full-child"></screen-connecting>
+      <screen-loading id="screen-loading" class="full-child"></screen-loading>
+      <screen-connecting id="screen-connecting" class="full-child"></screen-connecting>
       <screen-profile id="create-profile" class="full-child"></screen-profile>
 
-      <screen-playlist id="playlist" class="full-child"></screen-playlist>
+      <screen-playlist id="screen-playlist" class="full-child"></screen-playlist>
       <div id="effect" class="full-child"></div>
 
-      <screen-social id="social" class="full-child"></screen-social>
-      <screen-jukebox id="jukebox" class="full-child"></screen-jukebox>
+      <screen-social id="screen-social" class="full-child"></screen-social>
+      <screen-jukebox id="screen-jukebox" class="full-child"></screen-jukebox>
     </div>
 
     <!-- build:js sj.min.js -->
@@ -64,6 +64,7 @@
 
     <script src="components/screen-jukebox/screen-jukebox.js"></script>
     <script src="components/screen-jukebox/screen-jukebox-directive.js"></script>
+    <script src="components/screen-jukebox/jukebox-filter.js"></script>
 
     <script src="components/screen-loading/screen-loading.js"></script>
     <script src="components/screen-loading/screen-loading-directive.js"></script>
@@ -86,6 +87,8 @@
     <script src="components/scrollable-area/scrollable-area-horizontally/scrollable-area-horizontally-directive.js"></script>
     <script src="components/scrollable-area/scrollable-area-vertically/scrollable-area-vertically-directive.js"></script>
     <!-- endbuild -->
+
+    <script src="dummy.js"></script>
    </body>
 
 

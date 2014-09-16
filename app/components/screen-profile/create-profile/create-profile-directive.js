@@ -4,18 +4,18 @@ angular.module("screenProfile")
       return {
         restrict: 'E',
         templateUrl: 'components/screen-profile/create-profile/create-profile.html',
-        controller: function($scope, $element, animations, profile) {
+        controller: function($scope, $element, animate, profile) {
           $scope.placeHolder = "Skrillex";
           $scope.name = "";
           $scope.color = "#ff0000";
 
           var input = $element.find('input[type="text"]');
           input.on("focus", function() {
-            animations("keyboardUpInCreateProfile");
+            animate("keyboardUpInCreateProfile");
           });
 
           input.on("blur", function() {
-            animations("keyboardDownInCreateProfile");
+            animate("keyboardDownInCreateProfile");
           });
 
           mc = new Hammer(angular.element("#refresh-profile")[0]);
@@ -33,7 +33,7 @@ angular.module("screenProfile")
               .then(
                 function() {
                   // TODO: animation
-                  animations("fromCreateProfileToJukebox");
+                  animate("fromCreateProfileToJukebox");
                 },
                 function() {
                   // TODO: display error (is taken / connection error / etc.)

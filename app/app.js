@@ -5,7 +5,7 @@ angular.module('screens', [
   'screenPlaylist',
   'screenProfile',
   'screenSocial',
-  'animations',
+  'animate',
   'scrollableArea'
 ]);
 

@@ -1,4 +1,4 @@
-angular.module("animations", [])
+angular.module("animate", [])
   .config([
     function() {
     }

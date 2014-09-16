@@ -1,6 +1,6 @@
 angular.module("screenJukebox")
-  .directive("screenJukebox", ["animations",
-    function(animations) {
+  .directive("screenJukebox", ["animate",
+    function(animate) {
       return {
         restrict: 'E',
         transclude: false,
@@ -9,7 +9,7 @@ angular.module("screenJukebox")
           var ic = element.find("#icon-playlist");
           var mc = new Hammer(ic[0]);
           mc.on('tap', function() {
-            animations("openPlaylist");
+            animate("openPlaylist");
           });
         }
       };

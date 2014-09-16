@@ -1,6 +1,6 @@
 angular.module("screenPlaylist")
-  .directive("screenPlaylist", ["animations",
-    function(animations) {
+  .directive("screenPlaylist", ["animate",
+    function(animate) {
       return {
         restrict: 'E',
         templateUrl: 'components/screen-playlist/screen-playlist.html',
@@ -10,7 +10,7 @@ angular.module("screenPlaylist")
           var mc = new Hammer(ic[0]);
 
           mc.on('tap', function() {
-            animations("closePlaylist");
+            animate("closePlaylist");
           });
         }
       };

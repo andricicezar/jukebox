@@ -1,6 +1,6 @@
 angular.module('sjApp')
-  .controller('screenController', ['$scope', 'appState', 'appService', 'animations', "$timeout",
-    function($scope, appState, appService, animations, $timeout) {
+  .controller('screenController', ['$scope', 'appState', 'appService', 'animate', "$timeout",
+    function($scope, appState, appService, animate, $timeout) {
 
       $scope.$watch(
         function() { return appState.wifiState; },
@@ -29,7 +29,7 @@ angular.module('sjApp')
 
                 // JUNK
                 angular.copy(list, appState.availableBars);
-                animations("fromLoadingScreenToBarsScreen");
+                animate("fromLoadingScreenToBarsScreen");
               })
               ;
           }

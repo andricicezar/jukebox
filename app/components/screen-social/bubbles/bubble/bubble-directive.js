@@ -5,7 +5,7 @@ angular.module("screenSocial")
         restrict: 'E',
         transclude: false,
         templateUrl: 'components/screen-social/bubbles/bubble/bubble.html',
-        controller: function($scope, $element, appState, animations) {
+        controller: function($scope, $element, appState, animate) {
           var mc = new Hammer($element.find(".bubble-wrapper")[0]);
 
           mc.on('tap', function() {
@@ -13,7 +13,7 @@ angular.module("screenSocial")
             $element.find(".bubble").toggleClass("active");
 
             $scope.$apply(function() {
-              animations("openChat");
+              animate("openChat");
               angular.copy($scope.bubble, appState.currentConnection);
             });
           });

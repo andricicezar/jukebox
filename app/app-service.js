@@ -1,6 +1,6 @@
 angular.module('sjApp')
-  .service('appService', ['device', 'appState', '$q', 'animations',
-    function(device, appState, $q, animations) {
+  .service('appService', ['device', 'appState', '$q', 'animate',
+    function(device, appState, $q, animate) {
       var $app = this;
 
       $app.startInitializing = function() {
@@ -27,7 +27,7 @@ angular.module('sjApp')
         // TODO: connect to bar
         // TODO: animation
         
-        animations("fromBarsScreenToProfileScreen", {barEl: element});
+        animate("fromBarsScreenToProfileScreen", {barEl: element});
         
       };
     }

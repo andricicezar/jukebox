@@ -4,7 +4,6 @@ angular.module("scrollableArea")
       function link(scope, element, attrs) {
         element.iscroll = new IScroll(element[0], {
           mouseWheel: true
-          
         });
 
         scope.$watch(
@@ -12,7 +11,7 @@ angular.module("scrollableArea")
           function(newValue) {
             $timeout(function() {
               element.iscroll.refresh();
-            }, 100);
+            }, 0);
           }
         );
       };

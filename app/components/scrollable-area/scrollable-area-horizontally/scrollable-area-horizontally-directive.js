@@ -13,7 +13,7 @@ angular.module("scrollableArea")
           function(newValue) {
             $timeout(function() {
               element.iscroll.refresh();
-            }, 100);
+            }, 0);
           }
         );
       };

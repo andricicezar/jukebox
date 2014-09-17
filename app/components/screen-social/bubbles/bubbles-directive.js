@@ -21,10 +21,10 @@ angular.module("screenSocial")
             });
           });
 
-/*
+
           mc.on("swipedown", function() {
             animate("closeChat");
-          }); */
+          });
         }
       };
     }

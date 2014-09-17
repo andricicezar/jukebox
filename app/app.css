@@ -4,8 +4,8 @@ html, body {
   height: 100%;
   overflow: hidden;
   position: relative;
-  color: white;
-  font-family: 'Roboto', sans-serif;
+  color: #fafafa;
+  font-family: 'roboto', sans-serif;
 }
 
 /* HELPERS */
@@ -17,6 +17,9 @@ html, body {
   margin-right: -0.25em;
 }
 
+.header .title div {
+  text-indent: 15px;
+}
 .valign {
   display: inline-block;
   vertical-align: middle;
@@ -42,19 +45,18 @@ html, body {
   height: 100%;
 }
 
-#connect-bar, #create-profile, #loading-screen {
-/*  display: none;*/ 
+#screen-connecting, #create-profile, #screen-loading {
+  display: none;
 }
 
-#jukebox, #playlist, #social {
-  display: none; 
+#screen-jukebox, #screen-playlist, #screen-social {
+/*  display: none; */
 }
 
 .icon {
   float: right;
   height: 100%;
   padding: 0 20px;
-  margin-right: -20px;
 }
 
 .icon img {

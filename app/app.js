@@ -13,7 +13,8 @@ angular.module('sjApp', [
   'appState',
   'device',
   'profile',
-  'screens'
+  'screens',
+  'dummy'
 ])
   .config([
     function() {

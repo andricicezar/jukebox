@@ -1,0 +1,14 @@
+<div class="bubble-wrapper">
+  <div class="bubble" ng-style="{'border-color': '{{bubble.color}}'}">
+    <div class="notification" ng-if="bubble.name == 'Pa'">
+      <div class="circle" ng-style="{'box-shadow': '0 0 0 3px {{bubble.color}}, 0 0 0 6px #0e0e0e' }">
+      </div>
+    </div>
+    <div class="parent-valign">
+      <div class="valign">
+        {{bubble.name}}
+      </div>
+    </div>
+  </div>
+</div>
+

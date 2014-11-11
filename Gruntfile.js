@@ -2,10 +2,13 @@
 module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
-    clean: ["dist", ".tmp"],
+    clean: {
+      production: ["dist", ".tmp"],
+      cordova: ["sj/www", "sj.apk"],
+    },
 
     copy: {
-      main: {
+      production: {
         files: [
           {
             cwd: 'app/',
@@ -14,7 +17,18 @@ module.exports = function(grunt) {
             dest: 'dist/'
           }
         ]
-      }
+      },
+
+      cordova: {
+        files: [
+          {
+            cwd: 'dist/',
+            expand: true,
+            src: ['**'],
+            dest: 'sj/www/'
+          }
+        ]
+      },
     },
 
     uglify: {
@@ -62,7 +76,23 @@ module.exports = function(grunt) {
           keepalive: true
         }
       }
+    },
+
+    shell: {
+      compileAndroid: {
+        command: 'cordova compile android',
+        options: {
+          execOptions: {
+            cwd: 'sj/'
+          }
+        }
+      },
+
+      apk: {
+        command: 'cp sj/platforms/android/ant-build/SocialJukebox-debug.apk sj.apk'
+      }
     }
+
   });
 
   // Load the plugin that provides the "uglify" task.
@@ -74,13 +104,19 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-rev');
   grunt.loadNpmTasks('grunt-usemin');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task(s)
   grunt.registerTask('default', [
     'connect:dev'
   ]);
+
   grunt.registerTask('production', [
-    'clean', 'copy', 'useminPrepare', 'concat', 'uglify:my_target', 'cssmin:my_target', 'usemin', 'connect:production'
+    'clean:production', 'copy:production', 'useminPrepare', 'concat', 'uglify:my_target', 'cssmin:my_target', 'usemin', 'connect:production'
+  ]);
+
+  grunt.registerTask('compile', [
+    'clean:cordova', 'copy:cordova', 'shell:compileAndroid', 'shell:apk'
   ]);
 
 };

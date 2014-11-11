@@ -1,0 +1,102 @@
+/* SCREEN social */
+#screen-social {
+  top: 0;
+  z-index: 2000;
+  height: auto;
+  bottom: 0;
+  background: #1e1e1e;
+}
+
+#screen-social .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#screen-social .bubbles-wrapper {
+  background: #0e0e0e;
+/*  border-top: 1px solid #3e3e3e; */
+  width: 100%;
+  height: 80px;
+}
+#screen-social .bubbles {
+  padding: 0 10px;
+  white-space: nowrap;
+  position: absolute;
+  min-width: calc(100% - 20px + 1px);
+}
+
+#screen-social .bubble-wrapper {
+  padding: 10px 5px;
+  display: inline-block;
+}
+
+#screen-social .bubble {
+  border-radius: 50%;
+  border: 3px solid #ed537F;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  position: relative;
+}
+
+#screen-social .bubble.active {
+  background: magenta;
+}
+
+#screen-social .bubble .notification {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation: notification 2.5s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes notification {
+  0% {
+    -webkit-transform: rotate(140deg);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: rotate(-50deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: rotate(-50deg);
+    opacity: 1;
+  }
+}
+
+#screen-social .bubble .circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 21px;
+  background: #0e0e0e;
+}
+
+#chat {
+  position: absolute;
+  top: 80px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+#chat .content {
+  padding: 10px 20px;
+}
+
+

@@ -1,5 +1,5 @@
 angular.module("scrollableArea")
-  .directive("scrollableAreaPlaylist", ["$timeout", "$interval", "appState",
+  .directive("scrollableAreaDPlaylist", ["$timeout", "$interval", "appState",
     function($timeout, $interval, appState) {
       function updateContent(el, data) {
         console.log(el, data);

@@ -1,6 +1,6 @@
 angular.module('sjApp')
-  .service('appService', ['device', 'appState', '$q', 'animate',
-    function(device, appState, $q, animate) {
+  .service('appService', ['device', 'appState', '$q', 'animate', 'ws',
+    function(device, appState, $q, animate, ws) {
       var $app = this;
 
       $app.startInitializing = function() {
@@ -26,9 +26,8 @@ angular.module('sjApp')
       $app.connectToBar = function(bar, element) {
         // TODO: connect to bar
         // TODO: animation
-        
+        ws.connectTo("ws://192.168.2.17:3000/");
         animate("fromBarsScreenToProfileScreen", {barEl: element});
-        
       };
     }
   ])

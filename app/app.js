@@ -12,6 +12,7 @@ angular.module('screens', [
 angular.module('sjApp', [
   'appState',
   'device',
+  'ws',
   'profile',
   'screens',
   'dummy'

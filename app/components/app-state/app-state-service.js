@@ -11,7 +11,14 @@ angular.module("appState")
         connections: [],
 
         playlist: [],
-        jukebox: []
+        jukebox: [],
+        currentSong: [],
+
+        $statusDeferred: undefined,
+        status: function() {
+          $statusDeferred = $q.defer();
+          return $statusDeferred.promise;
+        }
       };
     }
   ])

@@ -1,6 +1,7 @@
 angular.module("scrollableArea")
   .directive("scrollableAreaVertically", ["$timeout",
     function($timeout) {
+
       function link(scope, element, attrs) {
         element.iscroll = new IScroll(element[0], {
           mouseWheel: true
@@ -14,12 +15,14 @@ angular.module("scrollableArea")
             }, 0);
           }
         );
-      };
+      }
+
 
       return {
         restrict: 'C',
         link: link
-      }
+      };
     }
   ])
   ;
+

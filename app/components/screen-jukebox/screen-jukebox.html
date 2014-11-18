@@ -13,15 +13,15 @@
 
       <div class="song-current">
         <div class="song-title">
-          Breaking Benjamin
+          {{currentSong.name}}
         </div>
         <div class="song-subtitle">
-          Diary of jane
+          {{currentSong.artist}}
         </div>
         <div class="song-progress">
-          <div class="song-progress-full">
-          </div>
-          <div class="song-progress-current">
+          <!-- <div class="song-progress-full">
+          </div> -->
+          <div class="song-progress-current" ng-style="{'width': currentSong.progress}">
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
             {{song.artist}}
           </div>
           <div class="song-subtitle">
-            {{song.title}}
+            {{song.name}}
           </div>
         </div>
         <div class="song-vote parent-valign">

@@ -75,7 +75,15 @@ module.exports = function(grunt) {
           base: 'dist',
           keepalive: true
         }
+      },
+
+      server: {
+        options: {
+          port: 8000,
+          keepalive: true
+        }
       }
+     
     },
 
     shell: {
@@ -116,7 +124,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('compile', [
-    'clean:cordova', 'copy:cordova', 'shell:compileAndroid', 'shell:apk'
+    'clean:cordova', 'copy:cordova', 'shell:compileAndroid', 'shell:apk', 'connect:server'
   ]);
 
 };

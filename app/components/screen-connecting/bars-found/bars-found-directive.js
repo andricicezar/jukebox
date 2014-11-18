@@ -4,9 +4,11 @@ angular.module("screenConnecting")
       return {
         restrict: 'C',
         templateUrl: 'components/screen-connecting/bars-found/bars-found.html',
-        controller: function($scope, appState) {
-          $scope.availableBars = appState.availableBars;
-        }
+        controller: ["$scope", "appState",
+          function($scope, appState) {
+            $scope.availableBars = appState.availableBars;
+          }
+        ]
       }
     }
   ])

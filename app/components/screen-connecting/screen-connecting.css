@@ -5,7 +5,7 @@
 
 #screen-connecting .container {
   position: absolute;
-  top: 15%;
+  top: 96px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -37,25 +37,24 @@
 }
 
 #screen-bars .content {
-  padding: 0 5%;
-  padding-bottom: 20px;
+  padding: 0 18px;
   overflow: hidden;
 }
 
 #screen-bars .content h3 {
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 300;
   color:  rgba(227, 227, 227, 0.5);
   text-align: center;
-  margin-top: 8%;
-  margin-bottom: 4%;
+  margin-top: 27px;
+  margin-bottom: 18px;
 }
 
 
 #screen-bars .bar,
 .bar.animatedBar {
   width: 100%;
-  margin-bottom: 4%;
+  margin-bottom: 18px;
   margin-left: 50%;
   opacity: 0;
 }
@@ -63,9 +62,9 @@
 #screen-bars .bar .title,
 .bar.animatedBar .title {
   color: #e3e3e3;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
-  margin-bottom: 2.5%;
+  margin-bottom: 9px;
 }
 
 #screen-bars .image img,

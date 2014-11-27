@@ -25,6 +25,11 @@ angular.module("screenJukebox")
               function() { return appState.currentSong.song_id; },
               function() {
                 scope.currentSong = currentSongFilter(appState.playlist, appState.currentSong);
+                if (!scope.currentSong) return;
+                  animate("playingSong", {
+                    progress: scope.currentSong.progress,
+                    length: scope.currentSong.length
+                  });
               }
             );
           }

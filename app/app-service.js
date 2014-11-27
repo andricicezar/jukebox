@@ -26,7 +26,7 @@ angular.module('sjApp')
       $app.connectToBar = function(bar, element) {
         // TODO: connect to bar
         // TODO: animation
-        ws.connectTo("ws://192.168.2.17:3000/");
+        ws.connectTo("ws://192.168.1.12:3000/");
         animate("fromBarsScreenToProfileScreen", {barEl: element});
       };
     }

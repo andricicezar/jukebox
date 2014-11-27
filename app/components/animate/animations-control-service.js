@@ -64,7 +64,7 @@ angular.module("animate")
         if (controller[anim]) {
           controller[anim](anim, options);
         } else if (typeof animations[anim] == "function") {
-          animations[anim]();
+          animations[anim](options);
         } else {
           animations[anim].time(0).play().call(callApply);
         }

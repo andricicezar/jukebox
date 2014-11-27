@@ -13,7 +13,7 @@
 }
 
 #screen-playlist .content {
-  padding: 0 15px;
+  /*padding: 0 15px;*/
 }
 
 #screen-playlist .header {
@@ -40,7 +40,8 @@
 }
 
 #screen-playlist .song {
-  height: 60px;
+  padding: 9px 20px;
+  height: 52px;
   border-bottom: 1px solid #3e3e3e;
 }
 
@@ -49,14 +50,16 @@
   color: #eee;
   /*color: #15acd6;*/
   line-height: 1.5em;
-  margin-top: 6px;
+  margin-top: 3px;
 }
 
 #screen-playlist .song .song-subtitle {
   /*color: #e9e9e9;*/
-  color: #9e9e9e;
+  /*color: #9e9e9e;*/
+  color: #c3c3c3;
   line-height: 1.2em;
   font-weight: 100;
+  font-size: 15px;
 }
 
 #screen-playlist .song .song-data {

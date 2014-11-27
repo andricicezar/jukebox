@@ -52,7 +52,7 @@ angular.module("animate")
           }, 0, [anim]);
 
           anim.to("#screen-loading", 1, {
-            height: "15%",
+            height: "96px",
             ease: Power3.easeOut
           }, 0);
 
@@ -303,7 +303,19 @@ angular.module("animate")
           });
 
           return anim.play();
+        },
+
+        playingSong: function(options) {
+          var anim = new TimelineMax();
+          console.log(options);
+          anim.to(".song-progress-current", options.length*(1-options.progress/100), {
+            width: "100%",
+            ease: Power0.linear
+          }, 0);
+
+          return anim.play();
         }
+
       };
 
     }

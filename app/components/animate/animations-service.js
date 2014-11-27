@@ -308,10 +308,15 @@ angular.module("animate")
         playingSong: function(options) {
           var anim = new TimelineMax();
           console.log(options);
+
+          anim.addCallback(function(progress) {
+            angular.element(".song-progress-current").width(progress + "%");
+          }, 0, [options.progress]);
+
           anim.to(".song-progress-current", options.length*(1-options.progress/100), {
             width: "100%",
             ease: Power0.linear
-          }, 0);
+          }, 0.01);
 
           return anim.play();
         }

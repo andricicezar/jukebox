@@ -7,6 +7,13 @@ angular.module('ws')
 
       Service.newMessage = function(message) {
         console.log(message.message);
+
+        switch (message.message) {
+          case 'res-current-song':
+            message.message = "evt-current-song";
+            break;
+        };
+
         switch (message.message) {
           case 'res-queue':
             angular.copy(message.queue, appState.jukebox);
@@ -14,8 +21,19 @@ angular.module('ws')
           case 'res-playlist':
             angular.copy(message.playlist, appState.playlist);
             break;
-          case 'res-current-song':
-            angular.copy(message.song, appState.currentSong);
+          case 'evt-current-song':
+            angular.copy(message.current_song, appState.currentSong);
+            break;
+          case 'evt-vote-added':
+            appState.songVoteAdded(message.vote.song_id);
+            break;
+          case 'res-vote':
+            if (message.vote.status == "ok") {
+              appState.songSuccessfulVoted(message.vote.song_id);
+              break;
+            }
+
+            console.log("Some error");
             break;
         };
       };
@@ -29,6 +47,10 @@ angular.module('ws')
           Service.ws.send('{"message":"req-playlist"}');
           Service.ws.send('{"message":"req-current-song"}');
           Service.ws.send('{"message":"req-queue"}');
+
+          setTimeout(function() {
+            Service.ws.send('{"message":"req-queue"}');
+          }, 1000);
           defer.resolve();
         };
 

@@ -7,6 +7,8 @@ angular.module("screenJukebox")
         templateUrl: 'components/screen-jukebox/screen-jukebox.html',
         link:
           function(scope, element) {
+            scope.jukebox = appState.jukeboxCached;
+
             var ic = element.find("#icon-playlist");
             var mc = new Hammer(ic[0]);
             mc.on('tap', function() {
@@ -16,7 +18,7 @@ angular.module("screenJukebox")
             scope.$watch(
               function() { return appState.jukebox; },
               function() {
-                scope.jukebox = jukeboxFilter(appState.playlist, appState.jukebox);
+                angular.copy(jukeboxFilter(appState.playlist, appState.jukebox), appState.jukeboxCached);
               },
               true
             );

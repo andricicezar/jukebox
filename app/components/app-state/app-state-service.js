@@ -11,8 +11,6 @@ angular.module("appState")
         connections: [],
 
         playlist: [],
-        jukebox: [],
-        jukeboxCached: [],
 
         currentSong: [],
 
@@ -23,30 +21,28 @@ angular.module("appState")
         },
 
         songVoteAdded: function(song_id) {
-          var isInJukebox = false;
-          for (var i = 0, l = appState.jukeboxCached.length; i < l; ++i) {
-            v = appState.jukeboxCached[i];
+          for (var i = 0, l = appState.playlist.length; i < l; ++i) {
+            v = appState.playlist[i];
 
             if (v.id == song_id) {
+              if (!v.votes) v.votes = 0;
               ++v.votes;
-              isInJukebox = true;
               break;
             }
           }
-
-          if (isInJukebox) return;
         },
 
         songSuccessfulVoted: function(song_id) {
-          for (var i = 0, l = appState.jukeboxCached.length; i < l; ++i) {
-            v = appState.jukeboxCached[i];
+          for (var i = 0, l = appState.playlist.length; i < l; ++i) {
+            v = appState.playlist[i];
 
             if (v.id == song_id) {
               v.voted = true;
               break;
             }
           }
-        },
+        }
+
       };
     }
   ])

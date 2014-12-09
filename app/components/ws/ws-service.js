@@ -15,9 +15,6 @@ angular.module('ws')
         };
 
         switch (message.message) {
-          case 'res-queue':
-            angular.copy(message.queue, appState.jukebox);
-            break;
           case 'res-playlist':
             angular.copy(message.playlist, appState.playlist);
             break;
@@ -46,11 +43,7 @@ angular.module('ws')
         Service.ws.onopen = function() {
           Service.ws.send('{"message":"req-playlist"}');
           Service.ws.send('{"message":"req-current-song"}');
-          Service.ws.send('{"message":"req-queue"}');
 
-          setTimeout(function() {
-            Service.ws.send('{"message":"req-queue"}');
-          }, 1000);
           defer.resolve();
         };
 

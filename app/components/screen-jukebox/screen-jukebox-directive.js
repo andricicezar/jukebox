@@ -1,27 +1,19 @@
 angular.module("screenJukebox")
-  .directive("screenJukebox", ["animate", "appState", "jukeboxFilter", "currentSongFilter",
-    function(animate, appState, jukeboxFilter, currentSongFilter) {
+  .directive("screenJukebox", ["animate", "appState", "currentSongFilter",
+    function(animate, appState, currentSongFilter) {
       return {
         restrict: 'E',
         transclude: false,
         templateUrl: 'components/screen-jukebox/screen-jukebox.html',
         link:
           function(scope, element) {
-            scope.jukebox = appState.jukeboxCached;
+            scope.jukebox = appState.playlist;
 
             var ic = element.find("#icon-playlist");
             var mc = new Hammer(ic[0]);
             mc.on('tap', function() {
               animate("openPlaylist");
             });
-
-            scope.$watch(
-              function() { return appState.jukebox; },
-              function() {
-                angular.copy(jukeboxFilter(appState.playlist, appState.jukebox), appState.jukeboxCached);
-              },
-              true
-            );
 
             scope.$watch(
               function() { return appState.currentSong.song_id; },
@@ -34,6 +26,11 @@ angular.module("screenJukebox")
                   });
               }
             );
+
+            scope.isHavingVotes = function(song) {
+              return song.votes > 0;
+            };
+
           }
 
       };

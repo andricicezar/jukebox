@@ -20,12 +20,13 @@ angular.module('ws')
             break;
           case 'evt-current-song':
             angular.copy(message.current_song, appState.currentSong);
+            console.log(appState.currentSong);
             break;
           case 'evt-vote-added':
             appState.songVoteAdded(message.vote.song_id);
             break;
           case 'res-vote':
-            if (message.vote.status == "ok") {
+            if (message.vote.status == "voted" || message.vote.status == "proposed") {
               appState.songSuccessfulVoted(message.vote.song_id);
               break;
             }
@@ -59,7 +60,7 @@ angular.module('ws')
       };
 
       Service.voteSong = function(song_id) {
-        Service.ws.send('{"message":"req-vote", "vote":{"song_id":'+song_id+' }');
+        Service.ws.send('{"message":"req-vote", "vote":{"song_id":'+song_id+' }}');
       };
 
       return Service;

@@ -1,6 +1,6 @@
 angular.module("appState")
-  .factory("appState", [
-    function() {
+  .factory("appState", ["$rootScope",
+    function($rootScope) {
       return appState = {
         wifiState: undefined,
 
@@ -25,8 +25,10 @@ angular.module("appState")
             v = appState.playlist[i];
 
             if (v.id == song_id) {
-              if (!v.votes) v.votes = 0;
-              ++v.votes;
+              $rootScope.$apply(function() {
+                if (!v.votes) v.votes = 0;
+                ++v.votes;
+              });
               break;
             }
           }
@@ -37,7 +39,9 @@ angular.module("appState")
             v = appState.playlist[i];
 
             if (v.id == song_id) {
-              v.voted = true;
+              $rootScope.$apply(function() {
+                v.voted = true;
+              });
               break;
             }
           }

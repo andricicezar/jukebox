@@ -1,6 +1,6 @@
 angular.module("screenPlaylist")
-  .directive("screenPlaylist", ["animate", "appState", "ws",
-    function(animate, appState, ws) {
+  .directive("screenPlaylist", ["animate", "appState", "ws", "highlightFilter",
+    function(animate, appState, ws, highlightFilter) {
       return {
         restrict: 'E',
         templateUrl: 'components/screen-playlist/screen-playlist.html',
@@ -15,8 +15,14 @@ angular.module("screenPlaylist")
               animate("closePlaylist");
             });
 
+            angular.element("#search-box").click(function() {
+              angular.element(".playlist-container").css("display", "none");
+              angular.element(".search-container").css("display", "block");
+            });
+
             scope.playlist = appState.playlist;
             scope.voteSong = ws.voteSong;
+            scope.highlight = highlightFilter;
           }
       };
     }

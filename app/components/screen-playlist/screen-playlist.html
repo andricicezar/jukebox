@@ -8,10 +8,10 @@
 </div>
 
 <div class="search-bar">
-  <input type="text" value="Search a song" />
+  <input id="search-box" type="text" placeHolder="Search a song" ng-model="searchSong"/>
 </div>
 
-<div class="container">
+<div class="container playlist-container">
   <div class="scrollable-area scrollable-area-vertically">
     <div class="content">
 
@@ -31,4 +31,24 @@
 
     </div>
   </div>
+</div>
+
+<div class="container search-container">
+  <div class="scrollable-area scrollable-area-vertically">
+    <div class="content">
+
+      <div class="song" ng-repeat="song in playlist | filter:searchSong"
+                        ng-click="voteSong(song.id)"
+                        ng-class="{'voted':song.voted}">
+        <div class="song-data">
+          <div class="song-title" ng-bind-html="song.artist | highlight:searchSong">
+          </div>
+          <div class="song-subtitle" ng-bind-html="song.name | highlight:searchSong">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

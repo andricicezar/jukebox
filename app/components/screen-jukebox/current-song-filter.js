@@ -5,11 +5,11 @@ angular.module("screenJukebox")
 
         for (var i = 0, il = playlist.length; i < il; ++i) {
           var song = playlist[i];
-          if (song.song_id == currentSong.id) {
+          if (song.id == currentSong.song_id) {
             var aux = {};
             angular.copy(song, aux);
+            song.votes = 0;
             aux.progress = currentSong.progress;
-            aux.length = currentSong.length;
             return aux;
           }
         }

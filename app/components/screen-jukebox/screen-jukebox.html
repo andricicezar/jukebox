@@ -7,25 +7,27 @@
   </div>
 </div>
 
+<div class="song-current">
+  <div class="song-title">
+    {{currentSong.name}}
+  </div>
+  <div class="song-subtitle">
+    {{currentSong.artist}}
+  </div>
+  <div class="song-progress">
+    <!-- <div class="song-progress-full">
+    </div> -->
+    <div class="song-progress-current"></div>
+  </div>
+</div>
+
+
 <div class="container">
   <div class="scrollable-area scrollable-area-vertically">
     <div class="content">
-
-      <div class="song-current">
-        <div class="song-title">
-          {{currentSong.name}}
-        </div>
-        <div class="song-subtitle">
-          {{currentSong.artist}}
-        </div>
-        <div class="song-progress">
-          <!-- <div class="song-progress-full">
-          </div> -->
-          <div class="song-progress-current"></div>
-        </div>
-      </div>
-
-      <div class="song" ng-repeat="song in jukebox | filter:isHavingVotes | orderBy:'votes':true" ng-class="{'voted': song.voted}">
+      <div class="song" ng-repeat="song in jukebox | filter:isHavingVotes | orderBy:'votes':true" 
+                        ng-class="{'voted': song.voted}"
+                        ng-click="voteSong(song.id)">
         <div class="song-data">
           <div class="song-title">
             {{song.artist}}

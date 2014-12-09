@@ -24,7 +24,7 @@
 
 #screen-jukebox .container {
   position: absolute;
-  top: 50px;
+  top: 137px;
   bottom: 80px;
   left: 0;
   right: 0;
@@ -109,9 +109,11 @@
 }
 
 #screen-jukebox .song.voted {
+  background-color: purple;
 }
 
 #screen-jukebox .song.voted .song-vote {
+  background-color: purple;
 }
 
 

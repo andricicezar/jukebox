@@ -7,12 +7,18 @@
   </div>
 </div>
 
+<div class="search-bar">
+  <input type="text" value="Search a song" />
+</div>
+
 <div class="container">
   <div class="scrollable-area scrollable-area-vertically">
     <div class="content">
 
 
-      <div class="song" ng-repeat="song in playlist">
+      <div class="song" ng-repeat="song in playlist"
+                        ng-click="voteSong(song.id)"
+                        ng-class="{'voted':song.voted}">
         <div class="song-data">
           <div class="song-title">
             {{song.artist}}

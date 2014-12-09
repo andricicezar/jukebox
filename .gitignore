@@ -1,4 +1,5 @@
 node_modules
 dist
 .tmp
-sj/www
+cordova/www
+crosswalk/assets/www

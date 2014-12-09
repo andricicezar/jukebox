@@ -1,6 +1,6 @@
 angular.module("screenPlaylist")
-  .directive("screenPlaylist", ["animate", "appState",
-    function(animate, appState) {
+  .directive("screenPlaylist", ["animate", "appState", "ws",
+    function(animate, appState, ws) {
       return {
         restrict: 'E',
         templateUrl: 'components/screen-playlist/screen-playlist.html',
@@ -16,6 +16,7 @@ angular.module("screenPlaylist")
             });
 
             scope.playlist = appState.playlist;
+            scope.voteSong = ws.voteSong;
           }
       };
     }

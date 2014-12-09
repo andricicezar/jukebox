@@ -1,6 +1,6 @@
 angular.module("screenJukebox")
-  .directive("screenJukebox", ["animate", "appState", "currentSongFilter",
-    function(animate, appState, currentSongFilter) {
+  .directive("screenJukebox", ["animate", "appState", "currentSongFilter", "ws",
+    function(animate, appState, currentSongFilter, ws) {
       return {
         restrict: 'E',
         transclude: false,
@@ -30,6 +30,8 @@ angular.module("screenJukebox")
             scope.isHavingVotes = function(song) {
               return song.votes > 0;
             };
+
+            scope.voteSong = ws.voteSong;
 
           }
 

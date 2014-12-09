@@ -58,6 +58,10 @@ angular.module('ws')
         return defer.promise;
       };
 
+      Service.voteSong = function(song_id) {
+        Service.ws.send('{"message":"req-vote", "vote":{"song_id":'+song_id+' }');
+      };
+
       return Service;
     }
   ])

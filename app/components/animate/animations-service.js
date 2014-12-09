@@ -110,7 +110,7 @@ angular.module("animate")
 
             oE.activateHardwareAccelaration(currentBar);
             anim.to(currentBar, 0.5, {
-              top: -titleHeight
+              top: -27
             }, 0.4);
 
             anim.to(currentBar, 0.5, {

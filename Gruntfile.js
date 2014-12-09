@@ -4,7 +4,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     clean: {
       production: ["dist", ".tmp"],
-      cordova: ["sj/www", "sj.apk"],
+      cordova: ["cordova/www/.", "sj-cordova.apk"],
+      crosswalk: ["crosswalk/assets/www/.", "sj-crosswalk.apk"]
     },
 
     copy: {
@@ -25,10 +26,21 @@ module.exports = function(grunt) {
             cwd: 'dist/',
             expand: true,
             src: ['**'],
-            dest: 'sj/www/'
+            dest: 'cordova/www/'
           }
         ]
       },
+
+      crosswalk: {
+        files: [
+          {
+            cwd: 'dist/',
+            expand: true,
+            src: ['**'],
+            dest: 'crosswalk/assets/www/'
+          }
+        ]
+      }
     },
 
     uglify: {
@@ -43,7 +55,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     cssmin: {
       my_target: {
         files: {
@@ -79,26 +91,40 @@ module.exports = function(grunt) {
 
       server: {
         options: {
-          port: 8000,
+          port: 8001,
           keepalive: true
         }
       }
-     
+
     },
 
     shell: {
-      compileAndroid: {
+      compileCordova: {
         command: 'cordova compile android',
         options: {
           execOptions: {
-            cwd: 'sj/'
+            cwd: 'cordova/'
           }
         }
       },
 
-      apk: {
-        command: 'cp sj/platforms/android/ant-build/SocialJukebox-debug.apk sj.apk'
+      compileCrosswalk: {
+        command: './cordova/build',
+        options: {
+          execOptions: {
+            cwd: 'crosswalk/'
+          }
+        }
+      },
+
+      apkCordova: {
+        command: 'cp cordova/platforms/android/ant-build/SocialJukebox-debug.apk sj-cordova.apk'
+      },
+
+      apkCrosswalk: {
+        command: 'cp crosswalk/bin/SocialJukebox-debug.apk sj-crosswalk.apk'
       }
+
     }
 
   });
@@ -123,8 +149,16 @@ module.exports = function(grunt) {
     'clean:production', 'copy:production', 'useminPrepare', 'concat', 'uglify:my_target', 'cssmin:my_target', 'usemin', 'connect:production'
   ]);
 
-  grunt.registerTask('compile', [
-    'clean:cordova', 'copy:cordova', 'shell:compileAndroid', 'shell:apk', 'connect:server'
+  grunt.registerTask('cordova', [
+    'clean:cordova', 'copy:cordova', 'shell:compileCordova', 'shell:apkCordova'
+  ]);
+
+  grunt.registerTask('crosswalk', [
+    'clean:crosswalk', 'copy:crosswalk', 'shell:compileCrosswalk', 'shell:apkCrosswalk'
+  ]);
+
+  grunt.registerTask('sheet', [
+    'connect:server'
   ]);
 
 };

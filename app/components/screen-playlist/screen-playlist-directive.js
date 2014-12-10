@@ -1,6 +1,6 @@
 angular.module("screenPlaylist")
-  .directive("screenPlaylist", ["animate", "appState", "ws", "highlightFilter",
-    function(animate, appState, ws, highlightFilter) {
+  .directive("screenPlaylist", ["appState", "ws", "highlightFilter",
+    function(appState, ws, highlightFilter) {
       return {
         restrict: 'E',
         templateUrl: 'components/screen-playlist/screen-playlist.html',
@@ -8,13 +8,6 @@ angular.module("screenPlaylist")
 
         link:
           function(scope, element) {
-            var ic = element.find("#icon-playlist-close");
-            var mc = new Hammer(ic[0]);
-
-            mc.on('tap', function() {
-              animate("closePlaylist");
-            });
-
             angular.element("#search-box").click(function() {
               angular.element(".playlist-container").css("display", "none");
               angular.element(".search-container").css("display", "block");
@@ -23,6 +16,13 @@ angular.module("screenPlaylist")
             scope.playlist = appState.playlist;
             scope.voteSong = ws.voteSong;
             scope.highlight = highlightFilter;
+          },
+
+        controller:
+          function($scope, animate) {
+            $scope.closePlaylist = function() {
+              animate("closePlaylist");
+            };
           }
       };
     }

@@ -146,7 +146,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('production', [
-    'clean:production', 'copy:production', 'useminPrepare', 'concat', 'uglify:my_target', 'cssmin:my_target', 'usemin', 'connect:production'
+    'clean:production', 'copy:production', 'useminPrepare', 'concat', 'uglify:my_target', 'cssmin:my_target', 'usemin'
   ]);
 
   grunt.registerTask('cordova', [
@@ -161,4 +161,7 @@ module.exports = function(grunt) {
     'connect:server'
   ]);
 
+  grunt.registerTask('compile', [
+    'production', 'cordova', 'crosswalk'
+  ]);
 };

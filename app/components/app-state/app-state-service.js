@@ -1,6 +1,6 @@
 angular.module("appState")
-  .factory("appState", ["$rootScope",
-    function($rootScope) {
+  .factory("appState", [
+    function() {
       return appState = {
         wifiState: undefined,
 
@@ -20,15 +20,14 @@ angular.module("appState")
           return $statusDeferred.promise;
         },
 
-        songVoteAdded: function(song_id) {
+        songVoteAdded: function(song_id, timestamp) {
           for (var i = 0, l = appState.playlist.length; i < l; ++i) {
             v = appState.playlist[i];
 
             if (v.id == song_id) {
-              $rootScope.$apply(function() {
                 if (!v.votes) v.votes = 0;
                 ++v.votes;
-              });
+                v.timestamp = timestamp;
               break;
             }
           }
@@ -39,9 +38,7 @@ angular.module("appState")
             v = appState.playlist[i];
 
             if (v.id == song_id) {
-              $rootScope.$apply(function() {
                 v.voted = true;
-              });
               break;
             }
           }

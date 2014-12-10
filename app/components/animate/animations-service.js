@@ -307,7 +307,6 @@ angular.module("animate")
 
         playingSong: function(options) {
           var anim = new TimelineMax();
-          console.log(options);
 
           anim.addCallback(function(progress) {
             angular.element(".song-progress-current").width(progress + "%");

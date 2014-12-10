@@ -2,7 +2,7 @@
   <div class="title parent-valign">
     <div class="valign">Jukebox</div>
   </div>
-  <div class="icon" id="icon-playlist">
+  <div class="icon" id="icon-playlist" ng-tap="openPlaylist()">
     <img src="lib/imgs/icon-playlist.png" />
   </div>
 </div>
@@ -25,9 +25,9 @@
         </div>
       </div>
 
-      <div class="song" ng-repeat="song in jukebox | filter:isHavingVotes | orderBy:'votes':true" 
+      <div class="song" ng-repeat="song in jukebox | filter:isHavingVotes | orderBy:['-votes', 'timestamp']"
                         ng-class="{'voted': song.voted}"
-                        ng-click="voteSong(song.id)">
+                        ng-tap="voteSong(song.id)">
         <div class="song-data">
           <div class="song-title">
             {{song.artist}}

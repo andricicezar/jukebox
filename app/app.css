@@ -9,20 +9,21 @@ html, body {
 }
 
 /* HELPERS */
-.parent-valign:before {
+/*.parent-valign:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
   margin-right: -0.25em;
-}
+}*/
 
 .header .title div {
   text-indent: 20px;
 }
 .valign {
   display: inline-block;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
+  margin-top: 17px;
 }
 
 /* LAYOUT */
@@ -54,14 +55,16 @@ html, body {
 }
 
 .icon {
-  float: right;
-  height: 100%;
-  padding: 0 20px;
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  height: 61px;
+  padding: 0 20px 0 30px;
 }
 
 .icon img {
-  height: 40%;
-  margin-top: 70%;
+  height: 20px;
+  margin-top: 15px;
   width: auto;
 }
 

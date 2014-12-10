@@ -10,8 +10,6 @@ angular.module("screenSocial")
 
           mc.on('tap', function() {
             // TODO: open chat if is needed
-            $element.find(".bubble").toggleClass("active");
-
             $scope.$apply(function() {
               animate("openChat");
               angular.copy($scope.bubble, appState.currentConnection);

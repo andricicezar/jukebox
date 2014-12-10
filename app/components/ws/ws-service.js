@@ -1,6 +1,6 @@
 angular.module('ws')
-  .factory('ws', ["$q", "appState",
-    function($q, appState) {
+  .factory('ws', ["$q", "appState", "$rootScope",
+    function($q, appState, $rootScope) {
       var Service = {};
 
       Service.ws = undefined;
@@ -15,16 +15,23 @@ angular.module('ws')
         };
 
         switch (message.message) {
+
           case 'res-playlist':
             angular.copy(message.playlist, appState.playlist);
             break;
+
           case 'evt-current-song':
-            angular.copy(message.current_song, appState.currentSong);
-            console.log(appState.currentSong);
+            if (message.current_song == null) {
+              angular.copy({song_id: -1}, appState.currentSong);
+            } else {
+              angular.copy(message.current_song, appState.currentSong);
+            }
             break;
+
           case 'evt-vote-added':
-            appState.songVoteAdded(message.vote.song_id);
+            appState.songVoteAdded(message.vote.song_id, message.vote.timestamp);
             break;
+
           case 'res-vote':
             if (message.vote.status == "voted" || message.vote.status == "proposed") {
               appState.songSuccessfulVoted(message.vote.song_id);
@@ -53,7 +60,9 @@ angular.module('ws')
         };
 
         Service.ws.onmessage = function(message) {
-          Service.newMessage(JSON.parse(message.data));
+          $rootScope.$apply(function() {
+            Service.newMessage(JSON.parse(message.data));
+          });
         };
 
         return defer.promise;

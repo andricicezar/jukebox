@@ -9,12 +9,6 @@ angular.module("screenJukebox")
           function(scope, element) {
             scope.jukebox = appState.playlist;
 
-            var ic = element.find("#icon-playlist");
-            var mc = new Hammer(ic[0]);
-            mc.on('tap', function() {
-              animate("openPlaylist");
-            });
-
             scope.$watch(
               function() { return appState.currentSong.song_id; },
               function() {
@@ -32,6 +26,14 @@ angular.module("screenJukebox")
             };
 
             scope.voteSong = ws.voteSong;
+
+          },
+
+        controller:
+          function($scope, animate) {
+            $scope.openPlaylist = function() {
+              animate("openPlaylist");
+            };
 
           }
 

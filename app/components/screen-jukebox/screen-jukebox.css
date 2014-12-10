@@ -12,9 +12,8 @@
 }
 
 #screen-jukebox .header {
-  height: 50px;
+  height: 44px;
   background: #0e0e0e;
-  border-bottom: 1px solid #3e3e3e;
 }
 
 #screen-jukebox .header .title {
@@ -25,11 +24,10 @@
 
 #screen-jukebox .container {
   position: absolute;
-  top: 137px;
+  top: 44px;
   bottom: 80px;
   left: 0;
   right: 0;
-  border-top: 1px solid #3e3e3e;
 }
 
 #screen-jukebox .content {
@@ -40,7 +38,7 @@
   height: 76px;
   /*margin-left: -5%;
   margin-right: -5%;*/
-  padding: 10px 20px 0 20px;
+  padding: 0 20px;
   /*border-bottom: 1px solid #3e3e3e;*/
   background: #0e0e0e;
 }
@@ -55,6 +53,7 @@
   font-weight: 300;
   line-height: 1.5em;
   font-size: 15px;
+  margin-top: -2px;
 }
 
 #screen-jukebox .song-progress {
@@ -74,7 +73,7 @@
 
 #screen-jukebox .song-progress-current {
   float: left;
-  width: 35%;
+  width: 0%;
   height: 100%;
   background: #15add7;
 }

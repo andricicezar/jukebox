@@ -11,7 +11,10 @@ angular.module("screenPlaylist")
             angular.element("#search-box").click(function() {
               angular.element(".playlist-container").css("display", "none");
               angular.element(".search-container").css("display", "block");
+              angular.element("#scroll-container").scrollTop(0);
             });
+
+
 
             scope.playlist = appState.playlist;
             scope.voteSong = ws.voteSong;
@@ -22,6 +25,9 @@ angular.module("screenPlaylist")
           function($scope, animate) {
             $scope.closePlaylist = function() {
               animate("closePlaylist");
+            };
+            $scope.searching = function() {
+              angular.element("#scroll-container").scrollTop(0);
             };
           }
       };

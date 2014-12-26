@@ -10,6 +10,7 @@ angular.module('screens', [
 ]);
 
 angular.module('sjApp', [
+  'vs-repeat',
   'appState',
   'device',
   'ws',

@@ -157,7 +157,7 @@ module.exports = function(grunt) {
     'clean:crosswalk', 'copy:crosswalk', 'shell:compileCrosswalk', 'shell:apkCrosswalk'
   ]);
 
-  grunt.registerTask('sheet', [
+  grunt.registerTask('server', [
     'connect:server'
   ]);
 

@@ -27,7 +27,7 @@ angular.module('sjApp')
         // TODO: connect to bar
         // TODO: animation
         (function auxiliar() {
-          ws.connectTo("ws://192.168.1.16:8081")
+          ws.connectTo("ws://192.168.1.22:8081")
             .then(function() {
             }, function() {
               setTimeout(auxiliar, 1000);

@@ -1,5 +1,4 @@
 .scrollable-area {
-  overflow: hidden;
   width: 100%;
   height: 100%;
 
@@ -21,4 +20,11 @@
   text-size-adjust: none;
 }
 
+.vs-scrollable-area-vertically {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
+.scrollable-area-vertically, .scrollable-area-horizontally {
+  overflow: hidden;
+}

@@ -8,13 +8,15 @@
 </div>
 
 <div class="search-bar">
-  <input id="search-box" type="text" placeHolder="Search a song" ng-model="searchSong"/>
+  <input id="search-box" 
+         type="text" 
+         placeHolder="Search a song" 
+         ng-model="searchSong"
+         ng-change="searching()"/>
 </div>
 
 <div class="container playlist-container">
-  <div class="scrollable-area scrollable-area-vertically">
-    <div class="content">
-
+  <div class="scrollable-area vs-scrollable-area-vertically" vs-repeat vs-excess="10">
 
       <div class="song" ng-repeat="song in playlist"
                         ng-tap="voteSong(song.id)"
@@ -29,13 +31,11 @@
         </div>
       </div>
 
-    </div>
   </div>
 </div>
 
 <div class="container search-container">
-  <div class="scrollable-area scrollable-area-vertically">
-    <div class="content">
+  <div id="scroll-container" class="vs-scrollable-area-vertically scrollable-area" vs-repeat vs-excess="10">
 
       <div class="song" ng-repeat="song in playlist | filter:searchSong"
                         ng-tap="voteSong(song.id)"
@@ -48,7 +48,6 @@
         </div>
       </div>
 
-    </div>
   </div>
 
 </div>

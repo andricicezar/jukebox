@@ -17,7 +17,7 @@
 }
 
 #screen-playlist .header {
-  height: 44px;
+  height: 40px;
   background: #0e0e0e;
 }
 
@@ -50,7 +50,7 @@
 
 #screen-playlist .container {
   position: absolute;
-  top: 78px;
+  top: 74px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -71,6 +71,7 @@
   padding: 9px 20px;
   height: 52px;
   border-bottom: 1px solid #3e3e3e;
+  width: 100%;
 }
 
 #screen-playlist .song:last-child {

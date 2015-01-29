@@ -1,0 +1,47 @@
+.message-parent {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.message {
+  background: #373737;
+  color: #e3e3e3;
+  border-radius: 5px;
+  font-size: 15px;
+  float: right;
+  padding: 10px 7px;
+  max-width: 90%;
+}
+
+.message.other {
+  background: #e3e3e3;
+  color: #1e1e1e;
+  float: left;
+}
+
+#screen-social .search-bar {
+  background: #0e0e0e;
+  padding: 10px 20px 0 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#screen-social .search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 13px;
+  font-size: 16px;
+  text-indent: 4px;
+  color: white;
+  line-height: 20px;
+  border-bottom: 1px solid #3e3e3e;
+  background:
+    url(../../lib/imgs/searchlines.gif) no-repeat left bottom,
+    url(../../lib/imgs/searchlines.gif) no-repeat right bottom;
+}
+
+

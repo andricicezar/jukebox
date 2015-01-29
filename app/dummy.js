@@ -9,37 +9,61 @@ angular.module("dummy", [])
         {
           "name": "Ce",
           "color": "#299fa8",
-          "messages": ["1"]
+          "messages": [
+            [true, "Hello, awesome song!"],
+            [false, "Yeaah! It's my favourite song!"],
+            [true, "Can I buy you a bear?"],
+            [false, "Sure! Let's meet! :D"],
+            [true, "Awesome"]]
         },
         {
           "name": "Pa",
           "color": "#ed537f",
-          "messages": ["2"]
+          "messages": [
+            [true, "This is a random text in latin. I know that it sounds weird, but believe me"],
+            [true, "This is a random text in latin. I know that it sounds weird, but believe me"],
+            [false, "This is a random text in latin. I know that it sounds weird, but believe me"],
+            [true, "This is a random text in latin. I know that it sounds weird, but believe me"]
+          ]
         },
         {
           "name": "Lo",
           "color": "#f69785",
-          "messages": ["3"]
+          "messages": [
+            [true, "Awesome song"]
+          ]
         },
         {
           "name": "Xz",
           "color": "#9ba37e",
-          "messages": ["4"]
+          "messages": [
+          [false, "Hello"]
+          ]
         },
         {
           "name": "Ca",
           "color": "#a1c23b",
-          "messages": ["5"]
+          "messages": [
+            [true, "Hello, awesome song!"],
+            [false, "Yeaah! It's my favourite song!"],
+            [true, "Can I buy you a bear?"],
+            [false, "Sure! Let's meet! :D"],
+            [true, "Awesome"]]
         },
         {
           "name": "Ca",
           "color": "#ed537f",
-          "messages": ["6"]
+          "messages":  [
+            [true, "Hello, awesome song!"],
+            [false, "Yeaah! It's my favourite song!"],
+            [true, "Can I buy you a bear?"],
+            [false, "Sure! Let's meet! :D"],
+            [true, "Awesome"]]
         },
         {
           "name": "Ca",
           "color": "#299fa8",
-          "messages": ["7"]
+          "messages": [[false, "Danke"]]
         }
       ];
 

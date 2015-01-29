@@ -1,1 +1,7 @@
-<p class="bleah" ng-repeat="message in messages track by $index">{{message}}</p>
+<div ng-repeat="message in messages track by $index" class="message-parent">
+  <div class="message" ng-class="{'other': message[0]}">
+    {{message[1]}}
+  </div>
+</div>
+
+

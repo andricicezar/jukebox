@@ -239,6 +239,7 @@
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/components/screen-jukebox \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/components/screen-profile \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/components/profile \
+/home/cezar/Public/socialjukebox/crosswalk/assets/www/components/ng-tap \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/components/screen-connecting \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/components/screen-loading \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/components/scrollable-area \
@@ -282,8 +283,10 @@
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/js \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/icon-close.png \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/logo-social-jukebox.png \
+/home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/searchlines.gif \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/icon-playlist.png \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/reload.png \
+/home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/votedsong.png \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/la_underground.jpg \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/icon-female.png \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/imgs/la_baza.png \
@@ -307,6 +310,7 @@
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/fonts/Roboto-BlackItalic.ttf \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/fonts/RobotoCondensed-BoldItalic.ttf \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/fonts/Roboto-Regular.ttf \
+/home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/css/robin-williams-the-sad-clown.jpg \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/css/famous.css \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/css/famous-angular.min.css \
 /home/cezar/Public/socialjukebox/crosswalk/assets/www/lib/css/reset.css \
